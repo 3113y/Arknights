@@ -1,0 +1,35 @@
+<ItemPools>
+    <Pool Name="boss">
+        <Item Name="Seaweed Salad" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Orange Storm" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Coffee Plains Coffee Candy" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Screaming Cherry" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+
+    </Pool> 
+    <Pool Name="treasure"> 
+        <Item Name="King's New Lance" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.1"/>
+        <Item Name="King's Armor" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="King's Crown" Weight="0.2" DecreaseBy="0.2" RemoveOn="0.1"/>
+        <Item Name="Antique Coins" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Flawless Jadestone" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+    </Pool>
+    <Pool Name="shop"> 
+        <Item Name="King's New Lance" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.1"/>
+        <Item Name="King's Armor" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="King's Crown" Weight="0.2" DecreaseBy="0.2" RemoveOn="0.1"/>
+        <Item Name="Golden Chalice" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Coin-Operated Toy" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Chivalric Commandments - New Edition" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Game Room Admin Access Card" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Ms. Christine Petting Ticket" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+    </Pool>
+    <Pool Name="secret"> 
+        <Item Name="Golden Chalice" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Coin-Operated Toy" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Chivalric Commandments - New Edition" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Antique Coins" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Flawless Jadestone" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Game Room Admin Access Card" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Ms. Christine Petting Ticket" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+    </Pool>
+</ItemPools>

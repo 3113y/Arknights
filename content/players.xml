@@ -1,0 +1,23 @@
+<players root="gfx/characters/costumes/" portraitroot="gfx/ui/stage/" nameimageroot="gfx/ui/boss/">
+    <player name="w"
+        skin="character_w_wis_isaac.png"
+        nameimage="w_boss.png"
+        hp="4"
+        armor="2"
+        keys="1"
+        portrait="playerportrait_w.png"
+        skinColor="-1"
+    />
+
+    <player name="wisadel"
+        skin="character_w_wis_isaac.png"
+        nameimage="wis_boss.png"
+        hp="4"
+        armor="2"
+        keys="1"
+        bombs="3"
+        portrait="playerportrait_wisdel.png"
+        skinColor="-1"
+        bSkinParent="w"
+    />
+</players>

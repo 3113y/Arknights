@@ -1,0 +1,13 @@
+<pocketitems>
+    <card
+name="Machine"
+description="Press the button, cobble together whatever garbage shoots out, and there you go, you're an inventor."
+hud="machine"
+/>
+<card
+name="Industry"
+description="These smuggled machines can make kitchenware, musical instruments... With a bit of tinkering, they can all be used in battle."
+hud="industry"
+
+/>
+</pocketitems>

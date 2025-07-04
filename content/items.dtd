@@ -1,0 +1,10 @@
+<!ELEMENT items (passive+)>
+<!ATTLIST items gfxroot CDATA #REQUIRED>
+<!ATTLIST items version NMTOKEN #REQUIRED>
+<!ELEMENT passive EMPTY>
+<!ATTLIST passive id NMTOKEN #REQUIRED>
+<!ATTLIST passive name CDATA #REQUIRED>
+<!ATTLIST passive gfx NMTOKEN #REQUIRED>
+<!ATTLIST passive description CDATA #REQUIRED>
+<!ATTLIST passive quality NMTOKEN #REQUIRED>
+<!ATTLIST passive cache NMTOKEN #REQUIRED>
