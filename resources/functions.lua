@@ -140,14 +140,14 @@ end
 
 Ark_mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, Ark_mod.Crown_Effect, CacheFlag.CACHE_DAMAGE)
 --死仇
---[[
+
 function mod:Hatred_Effect(player)
     if player:HasCollectible(Hatred) then
         player.Damage = player.Damage * 0.8
     end
 end
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.Hatred_Effect)
-]]
+
 --钱泪攻速套
 function Ark_mod:Coins_Tears()
     local num_golden = 0.05
