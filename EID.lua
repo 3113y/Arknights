@@ -1,25 +1,25 @@
 if EID then
-    EID:addCollectible(Crown, "↑{{Damage}} 当血量不高于1时攻击力*1.5,如果玩家集齐了三件及以上的国王收藏品，则攻击力*2.5#（偶尔存在BUG使该效果失效）", "诸王的冠冕", cn)
-    EID:addCollectible(New_Lance, "↑{{Tears}} 当血量不高于1时射速+3.27", "国王的新枪", cn)
-    EID:addCollectible(Armor, "获得后进入下一个房间时使红心降至1，减少的红心转化为魂心，且每进入一个房间后使红心-1、魂心+1，该效果不会使血量降低至0", "国王的铠甲", cn)
-    EID:addCollectible(Legacy, "飞舞道具，没用（其实是不知道怎么写增加充能）", "国王的延伸", cn)
-    EID:addCollectible(Beauty, "生成道具时会有奇妙效果", "美愿时代的留恋", cn)
-    EID:addCollectible(Hatred, "↓{{Damage}}攻击力*0.8（不会写敌人攻击力上升的效果，只能出此下策）", "死仇时代的恨意", cn)
-    EID:addCollectible(Golden_Chalice, "↑{{Tears}}每有1硬币，攻速+0.05", "金酒之杯", cn)
-    EID:addCollectible(Coin_Operated, "↑{{Tears}}每有1硬币，攻速+0.01", "投币玩具", cn)
-    EID:addCollectible(Chivalric_Commandments, "↑{{Tears}}每有1硬币，攻速+0.03", "骑士戒律·新编", cn)
-    EID:addCollectible(Screaming_Cherry, "↑{{Damage}}攻击力*1.15/*1.07", "尖叫樱桃", cn)
-    EID:addCollectible(Seaweed_Salad, "↑{{Tears}}攻速+0.5/+0.27", "凉拌海草", cn)
-    EID:addCollectible(Orange_Storm, "↑{{Damage}}攻击力*1.1/*1.05", "橙味风暴", cn)
-    EID:addCollectible(Coffee_Candy, "↑{{Tears}}攻速+0.61/0.33", "咖啡平原咖啡糖", cn)
-    EID:addCollectible(Antique_Coins, "硬币+20/16", "古旧钱币", cn)
-    EID:addCollectible(Flawless_Jadestone, "硬币+30/25", "无瑕宝玉", cn)
-    EID:addCollectible(Admin_Access_Card, "（硬币+3，)获得长子权", "游戏室管理员权限卡", cn)
-    EID:addCollectible(Petting_Ticket, "（魂心+1，）获得长子权", "Miss.Christine摸摸券", cn)
+    EID:addCollectible(Crown, "↑{{Damage}} 当血量不高于1时攻击力*1.5,如果玩家集齐了三件及以上的国王收藏品，则攻击力*2.5#（偶尔存在BUG使该效果失效）", "诸王的冠冕", 'zh_cn')
+    EID:addCollectible(New_Lance, "↑{{Tears}} 当血量不高于1时射速+3.27", "国王的新枪", 'zh_cn')
+    EID:addCollectible(Armor, "获得后进入下一个房间时使红心降至1，减少的红心转化为魂心，且每进入一个房间后使红心-1、魂心+1，该效果不会使血量降低至0", "国王的铠甲", 'zh_cn')
+    EID:addCollectible(Legacy, "飞舞道具，没用（其实是不知道怎么写增加充能）", "国王的延伸", 'zh_cn')
+    EID:addCollectible(Beauty, "生成道具时会有奇妙效果", "美愿时代的留恋", 'zh_cn')
+    EID:addCollectible(Hatred, "↓{{Damage}}攻击力*0.8（不会写敌人攻击力上升的效果，只能出此下策）", "死仇时代的恨意", 'zh_cn')
+    EID:addCollectible(Golden_Chalice, "↑{{Tears}}每有1硬币，攻速+0.05", "金酒之杯", 'zh_cn')
+    EID:addCollectible(Coin_Operated, "↑{{Tears}}每有1硬币，攻速+0.01", "投币玩具", 'zh_cn')
+    EID:addCollectible(Chivalric_Commandments, "↑{{Tears}}每有1硬币，攻速+0.03", "骑士戒律·新编", 'zh_cn')
+    EID:addCollectible(Screaming_Cherry, "↑{{Damage}}攻击力*1.15/*1.07", "尖叫樱桃", 'zh_cn')
+    EID:addCollectible(Seaweed_Salad, "↑{{Tears}}攻速+0.5/+0.27", "凉拌海草", 'zh_cn')
+    EID:addCollectible(Orange_Storm, "↑{{Damage}}攻击力*1.1/*1.05", "橙味风暴", 'zh_cn')
+    EID:addCollectible(Coffee_Candy, "↑{{Tears}}攻速+0.61/0.33", "咖啡平原咖啡糖", 'zh_cn')
+    EID:addCollectible(Antique_Coins, "硬币+20/16", "古旧钱币", 'zh_cn')
+    EID:addCollectible(Flawless_Jadestone, "硬币+30/25", "无瑕宝玉", 'zh_cn')
+    EID:addCollectible(Admin_Access_Card, "（硬币+3，)获得长子权", "游戏室管理员权限卡", 'zh_cn')
+    EID:addCollectible(Petting_Ticket, "（魂心+1，）获得长子权", "Miss.Christine摸摸券", 'zh_cn')
     --[[不知为何加载下列代码后EID成英文了先BAN了，以后再做英语支持
 
     Somehow, after loading the following code, the EID became English. I BAN it for now and add English support later.
-    If you are a EN player you can delete the CN EID coding and let these coding using
+    If you are a EN player you can delete the 'zh_cn' EID coding and let these coding using
 
     EID:addCollectible(Crown,"↑{{Damage}} Damage+ when HP is no more than 1. If the player collects three or more king collectibles,damage+++. #(Occasionally there is a bug that makes this effect invalid.)","King's Crown","en_us")
     EID:addCollectible(New_Lance,"↑{{Tears}} Tears++ when HP is no more than 1.","King's New Lance","en_us")

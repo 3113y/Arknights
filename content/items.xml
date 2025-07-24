@@ -1,4 +1,4 @@
-<items gfxroot="gfx/items/" deathanm2="gfx/Ar_items.anm2" version="1">
+<items gfxroot="gfx/items/" deathanm2="gfx/death items.anm2" version="1">
    <passive id="0" name="King's New Lance" gfx="king_new_lance_item.png" description="Beautiful wishes made in dire straits can bring hope, even if they are not necessarily the truth" quality="3" shopprice="20" cache="all" />
    <passive id="1" name="King's Legacy" gfx="king_legacy_item.png" description="Arm yourself with tenacity and confidence, while showing your friends tolerance and grace" quality="1" shopprice="3" cache="all" />
    <passive id="2" name="King's Armor" gfx="king_armor_item.png" description="There used to be many golden display cases placed before the palace gates and in the square" quality="2" shopprice="15" cache="all" />
