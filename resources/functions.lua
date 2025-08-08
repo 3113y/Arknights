@@ -27,6 +27,7 @@ local mon_1 = 0
 local mon_2 = 0
 local w_has_pri = 0
 local wis_has_pri = 0
+local Tainted_Lazarus = 0
 --获取游戏难度
 function Ark_mod.DIF()
     Game_dif = Game().Difficulty
@@ -71,6 +72,9 @@ function Ark_mod:Ar_Beginning(_, bool)
                 Game():Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE,
                     (Game():GetRoom():GetCenterPos() + Vector(-100, 0)),
                     Vector(0, 0), nil, Beauty, Game():GetRoom():GetSpawnSeed())
+                if player:GetPlayerType() == 35 then
+                    break
+                end
             end
         end
     end
@@ -506,6 +510,23 @@ function Ark_mod:w_wis_pri(player)
 end
 
 Ark_mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, Ark_mod.w_wis_pri)
+function Ark_mod:Lazarus(pickup, collider, low)
+    for i = 0, Game():GetNumPlayers() - 1 do
+        local player = Game():GetPlayer(i)
+        if player:GetPlayerType() == 29 or player:GetPlayerType() == 38 then
+            if collider.Type == EntityType.ENTITY_PLAYER then
+                if pickup.Type == 5 and pickup.Variant == 100 and pickup.SubType == Beauty then
+                    if Tainted_Lazarus == 0 then
+                        Tainted_Lazarus = 1
+                    end
+                end
+            end
+        end
+    end
+end
+
+Ark_mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, Ark_mod.Lazarus)
+
 --美愿
 function Ark_mod:Beauty_Effect()
     if Game():GetRoom():GetType() == RoomType.ROOM_TREASURE then
@@ -526,14 +547,14 @@ function Ark_mod:Beauty_Effect()
                 ItemConfig.TAG_BOB,
                 ItemConfig.TAG_SPIDER
             }
-            local table = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
+            local table_col = { {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
             local nums = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
-            if player:HasCollectible(Beauty) then
+            if player:HasCollectible(Beauty) or Tainted_Lazarus == 1 then
                 for col_i = 1, Isaac.GetItemConfig():GetCollectibles().Size - 1 do
                     if ItemConfig.Config.IsValidCollectible(col_i) then
                         for tag_i = 1, #Tags do
                             if Isaac.GetItemConfig():GetCollectible(col_i):HasTags(Tags[tag_i]) then
-                                table.insert(table[tag_i],col_i)
+                                table.insert(table_col[tag_i], col_i)
                                 if player:HasCollectible(col_i) then
                                     nums[tag_i] = nums[tag_i] + 1
                                 end
@@ -541,13 +562,13 @@ function Ark_mod:Beauty_Effect()
                         end
                     end
                 end
-                local table_del = Table_Copy(table)
+                local table_del = Table_Copy(table_col)
                 local king = { New_Lance, Legacy, Armor, Crown } --国王套
                 local hearts = player:GetHearts()
                 for num_i = 1, #nums do
                     if nums[num_i] == 1 or nums[num_i] == 2 then
-                        for _i = 1, #table[num_i] do
-                            if player:HasCollectible(table[num_i][_i]) then
+                        for _i = 1, #table_col[num_i] do
+                            if player:HasCollectible(table_col[num_i][_i]) then
                                 for _j = _i, #table_del[num_i] - 1 do
                                     table_del[num_i][_j] = table_del[num_i][_j + 1]
                                 end
@@ -577,4 +598,5 @@ function Ark_mod:Beauty_Effect()
         end
     end
 end
+
 Ark_mod:AddCallback(ModCallbacks.MC_PRE_GET_COLLECTIBLE, Ark_mod.Beauty_Effect)

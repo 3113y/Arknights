@@ -3,6 +3,7 @@ local wisadel_TYPE = Isaac.GetPlayerTypeByName("wisadel", true)
 local W_hairCostume = Isaac.GetCostumeIdByPath("gfx/characters/w_wis_hair.anm2")
 local Shadow_Revenant = Isaac.GetItemIdByName("Shadow of Revenant")
 local wis_tear = Isaac.GetEntityVariantByName("Shadow of Revenant bullt")
+
 function Ark_mod:w_(player)
     if player:GetPlayerType() ~= w_Type then
         return
@@ -38,7 +39,7 @@ function Ark_mod:w_wis_begin()
     end
 end
 
-Ark_mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, Ark_mod.w_wis_begin,false)
+Ark_mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, Ark_mod.w_wis_begin, false)
 
 function Ark_mod:wis_tears(tear)
     for i = 0, Game():GetNumPlayers() - 1 do
@@ -52,3 +53,4 @@ function Ark_mod:wis_tears(tear)
 end
 
 Ark_mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, Ark_mod.wis_tears)
+

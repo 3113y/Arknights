@@ -21,7 +21,7 @@
 目前正在解决暂停界面道具缩略图全是新枪的问题
 
 </description>
-    <version>1.31</version>
+    <version>1.33</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Items"/>
