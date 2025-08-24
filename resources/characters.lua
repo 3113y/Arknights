@@ -54,3 +54,10 @@ end
 
 Ark_mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, Ark_mod.wis_tears)
 
+function Ark_mod:Remove_Coin_Items(player)
+    if player:GetPlayerType() == PlayerType.PLAYER_KEEPER_B then
+        Game():GetItemPool():RemoveCollectible(Antique_Coins)
+        Game():GetItemPool():RemoveCollectible(Flawless_Jadestone)
+    end
+end
+Ark_mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Ark_mod.Remove_Coin_Items)
