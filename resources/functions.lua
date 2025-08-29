@@ -497,8 +497,7 @@ Ark_mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, Ark_mod.wis_onCache)
 function Ark_mod:w_wis_pri(player)
     if player:HasCollectible(619) then
         if player:GetPlayerType() == w_Type then
-            if w_has_pri == 0 then
-                w_has_pri = 1
+            if w_has_pri == 0 then                w_has_pri = 1
             end
         elseif player:GetPlayerType() == wisadel_TYPE then
             if wis_has_pri == 0 then
@@ -600,3 +599,132 @@ function Ark_mod:Beauty_Effect()
 end
 
 Ark_mod:AddCallback(ModCallbacks.MC_PRE_GET_COLLECTIBLE, Ark_mod.Beauty_Effect)
+
+
+--[[Ark_mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function()
+for i = 0, Game():GetLevel():GetRooms().Size-1 do
+        local roomdesc = Game():GetLevel():GetRooms():Get(i)
+        if roomdesc and roomdesc.Data then
+            if roomdesc.Data.Type == RoomType.ROOM_BOSS then
+                if not BossNameToChinese[(RemoveCopySuffix(roomdesc.Data.Name))] then
+                    print("未翻译Boss: " .. (RemoveCopySuffix(roomdesc.Data.Name)))
+                else
+                    print("已翻译Boss: " ..
+                        (RemoveCopySuffix(roomdesc.Data.Name)) ..
+                        " -> " .. BossNameToChinese[(RemoveCopySuffix(roomdesc.Data.Name))])
+                end
+            end
+        end
+    end
+end)
+BossNameToChinese = {
+    ["Monstro"] = "萌死戳",
+    ["Larry Jr."] = "拉里子虫",
+    ["Chub"] = "空心虫",
+    ["Gurdy"] = "肉山",
+    ["Monstro II"] = "萌死戳 II",
+    ["Mom"] = "妈妈",
+    ["Scolex"] = "头节虫",
+    ["Mom's Heart"] = "妈妈的心脏",
+    ["Famine"] = "饥荒骑士",
+    ["Pestilence"] = "瘟疫骑士",
+    ["War"] = "战争骑士",
+    ["Death"] = "死亡骑士",
+    ["The Duke of Flies"] = "苍蝇公爵",
+    ["Peep"] = "嘘嘘怪",
+    ["Loki"] = "洛基",
+    ["Blastocyst"] = "囊胚",
+    ["Gemini"] = "连体双子",
+    ["Fistula"] = "瘘管团",
+    ["Gish"] = "吉什",
+    ["Steven"] = "史蒂文",
+    ["C.H.A.D."] = "查德",
+    ["Headless Horseman"] = "无头骑士",
+    ["The Fallen"] = "堕落恶魔",
+    ["Satan"] = "撒旦",
+    ["It Lives!"] = "它还活着",
+    ["The Hollow"] = "空心虫",
+    ["The Carrion Queen"] = "腐蛆女王",
+    ["Gurdy Jr."] = "小肉山",
+    ["The Husk"] = "尸壳",
+    ["The Bloat"] = "充血怪",
+    ["Lokii"] = "分身洛基",
+    ["The Blighted Ovum"] = "凋零双子",
+    ["Teratoma"] = "中型畸胎瘤",
+    ["Widow"] = "灰寡妇蛛",
+    ["Mask of Infamy"] = "耻辱假面",
+    ["The Wretched"] = "伤痕寡妇蛛",
+    ["Pin"] = "钉头虫",
+    ["Conquest"] = "征服骑士",
+    ["Isaac"] = "以撒",
+    ["???"] = "???",
+    ["Daddy Long Legs"] = "长腿蛛父",
+    ["Triachnid"] = "三腿蜘蛛",
+    ["Haunt"] = "大恶灵",
+    ["Haunt 2"] = "被遗弃者",
+    ["Dingle"] = "坨坨",
+    ["Dingle 2"] = "布朗尼",
+    ["Mega Maw"] = "超级大嘴头",
+    ["The Gate"] = "守门骷髅",
+    ["Mega Fatty"] = "超级肥仔",
+    ["The Cage"] = "大肥笼",
+    ["Mama Gurdy"] = "母体肉山",
+    ["Dark One"] = "黑暗恶魔",
+    ["The Adversary"] = "敌手",
+    ["Polycephalus"] = "多头畸胎",
+    ["Mr. Fred"] = "大弗莱德",
+    ["The Lamb"] = "羔羊",
+    ["Mega Satan"] = "超级撒旦",
+    ["Gurglings"] = "肉山幼崽",
+    ["the stain"] = "血痕畸胎",
+    ["Brownie"] = "布朗尼",
+    ["The Forsaken"] = "被遗弃者",
+    ["Little Horn"] = "小角恶魔",
+    ["Ragman"] = "破布人",
+    ["Ultra Greed"] = "究极贪婪",
+    ["???(Alt)"] = "???(变种)",
+    ["Dangle"] = "滑坨坨",
+    ["Turdling"] = "粪山幼崽",
+    ["Frail"] = "脆皮虫",
+    ["Rag Mega"] = "超级绷带人",
+    ["Vis Sisters"] = "开膛姐妹",
+    ["Big Horn"] = "巨角恶魔",
+    ["Delirium"] = "精神错乱",
+    ["Ultra Greedier"] = "终极大贪婪",
+    ["Matriarch"] = "胖蛆族母",
+    ["The Pile"] = "骨堆畸胎",
+    ["Reap Creep"] = "裂面爬墙蛛",
+    ["Beelzeblub"] = "别西卜",
+    ["Wormwood"] = "茵陈",
+    ["Rainmaker"] = "造雨人",
+    ["The Visage"] = "锁链假面",
+    ["Siren"] = "塞壬",
+    ["Tuff Twins"] = "灰岩子虫",
+    ["The Heretic"] = "大异端",
+    ["Hornfel"] = "岩角恶魔",
+    ["Great Gideon"] = "大基甸",
+    ["Baby Plum"] = "糖梅宝宝",
+    ["Scourge"] = "鞭刃怪",
+    ["Chimera"] = "嵌体怪",
+    ["Rotgut"] = "腐脏巨面",
+    ["Min Min"] = "冥明火灵",
+    ["Clog"] = "拦路屎",
+    ["Singe"] = "焦皮小子",
+    ["Bumbino"] = "大乞丐宝",
+    ["Colostomia"] = "结肠造口袋",
+    ["The Shell"] = "枯壳虫",
+    ["Turdlet"] = " 虫形大便",
+    ["Raglich"] = "绷带巫妖",
+    ["Dogma"] = "教条",
+    ["The Beast"] = "祸兽",
+    ["Horny Boys"] = "魔角兄弟",
+    ["Clutch"] = "附身邪鬼",
+    ["Mother"] = "母亲",
+    ["Boss Room"] = "???",
+    ["Mom (mausoleum)"] = "妈妈 (陵墓)",
+    ["Double Trouble"] = "坏事成双"
+}
+function RemoveCopySuffix(name)
+    -- 去除末尾的" (copy)"，不区分大小写
+    return string.gsub(name, "%s*%(copy%)$", "")
+end]]

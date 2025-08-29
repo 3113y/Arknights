@@ -15,7 +15,7 @@ W：D12，2冲，在当前房间所有敌怪脚下放置炸弹
 （长子权还没适配）
 
 </description>
-    <version>1.35</version>
+    <version>1.37</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Items"/>

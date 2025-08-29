@@ -3,7 +3,7 @@
    <passive id="1" name="King's Legacy" gfx="king_legacy_item.png" description="Arm yourself with tenacity and confidence, while showing your friends tolerance and grace" quality="1" shopprice="3" cache="all" />
    <passive id="2" name="King's Armor" gfx="king_armor_item.png" description="There used to be many golden display cases placed before the palace gates and in the square" quality="2" shopprice="15" cache="all" />
    <passive id="3" name="King's Crown" gfx="king_crown_item.png" description="O Nameless King, may you continue to bless Iberia, even should your kingdom fall to ruin" quality="4" shopprice="25" cache="all" />
-   <passive id="4" name="Nostalgia of Beauty" gfx="nostalgia_of_beauty_item.png" description="A refreshed node is more likely to become a Wish Fulfilled" quality="3" cache="all" tags="lazarussharedglobal"/>
+   <passive id="4" name="Nostalgia of Beauty" gfx="nostalgia_of_beauty_item.png" description="A refreshed node is more likely to become a Wish Fulfilled" quality="3" cache="all" tags="lazarussharedglobal quest"/>
    <passive id="5" name="Talons of Hatred" gfx="talons_of_hatred_item.png" description="A vampire killed my sister, a Nachzehrer took my papa, and mama escaped with me. " quality="1" cache="all" />
    <passive id="6" name="Golden Chalice" gfx="golden_chalice_item.png" description="Saints, knights, and pietists. All of them are madmen. Dear God, even the chalice itself is made of pure gold!" quality="3" shopprice="20" cache="all" />
    <passive id="7" name="Coin-Operated Toy" gfx="coin_operated_toy_item.png" description="Saints, knights, and pietists. All of them are madmen. Dear God, even the chalice itself is made of pure gold!" quality="1" shopprice="10" cache="all" />
