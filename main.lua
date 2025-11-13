@@ -1,27 +1,82 @@
 ---@diagnostic disable: duplicate-set-field, undefined-global, lowercase-global
-Ark_mod = RegisterMod("Ar", 1)
-New_Lance = Isaac.GetItemIdByName("King's New Lance")
-Legacy = Isaac.GetItemIdByName("King's Legacy")
-Armor = Isaac.GetItemIdByName("King's Armor")
-Crown = Isaac.GetItemIdByName("King's Crown")
-Beauty = Isaac.GetItemIdByName("Nostalgia of Beauty")
-Hatred = Isaac.GetItemIdByName("Talons of Hatred")
-Golden_Chalice = Isaac.GetItemIdByName("Golden Chalice")
-Coin_Operated = Isaac.GetItemIdByName("Coin-Operated Toy")
-Chivalric_Commandments = Isaac.GetItemIdByName("Chivalric Commandments - New Edition")
-Seaweed_Salad = Isaac.GetItemIdByName("Seaweed Salad")
-Orange_Storm = Isaac.GetItemIdByName("Orange Storm")
-Coffee_Candy = Isaac.GetItemIdByName("Coffee Plains Coffee Candy")
-Screaming_Cherry = Isaac.GetItemIdByName("Screaming Cherry")
-Antique_Coins = Isaac.GetItemIdByName("Antique Coins")
-Flawless_Jadestone = Isaac.GetItemIdByName("Flawless Jadestone")
-Admin_Access_Card = Isaac.GetItemIdByName("Game Room Admin Access Card")
-Petting_Ticket = Isaac.GetItemIdByName("Ms. Christine Petting Ticket")
-Shadow_Revenant = Isaac.GetItemIdByName("Shadow of Revenant")
+-- Arknights Mod - 主入口文件
+-- 定义全局命名空间和模块结构
 
-require("scripts.EID")
-include("scripts.functions")
-include("scripts.characters")
-include("scripts.curses")
-include("scripts.enemies")
-include("scripts.pockets")
+-- 注册 Mod
+Ark_MOD = RegisterMod("Arknights", 1)
+
+-- 全局命名空间 - 唯一的全局变量
+Ark = {
+    -- 道具模块
+    Item = {
+        Variable = {
+            Bool = {},
+            Num = {},
+            String = {}
+        },
+        Table = {},
+        Info = {},
+        Function = {
+            Custom = {}
+        }
+    },
+    -- 角色模块
+    Character = {
+        Variable = {
+            Bool = {},
+            Num = {},
+            String = {}
+        },
+        Table = {},
+        Info = {},
+        Function = {
+            Custom = {}
+        }
+    },
+    -- 诅咒模块
+    Curse = {
+        Variable = {
+            Bool = {},
+            Num = {},
+            String = {}
+        },
+        Table = {},
+        Info = {},
+        Function = {
+            Custom = {}
+        }
+    },
+    -- 敌人模块
+    Enemy = {
+        Variable = {
+            Bool = {},
+            Num = {},
+            String = {}
+        },
+        Table = {},
+        Info = {},
+        Function = {
+            Custom = {}
+        }
+    },
+    -- 口袋道具模块
+    Pocket = {
+        Variable = {
+            Bool = {},
+            Num = {},
+            String = {}
+        },
+        Table = {},
+        Info = {},
+        Function = {
+            Custom = {}
+        }
+    }
+}
+-- 加载模块
+include("scripts.item")
+include("scripts.character")
+include("scripts.curse")
+include("scripts.enemy")
+include("scripts.pocket")
+include("scripts.EID")
